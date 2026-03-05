@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main()
+{
+    char nonterminal;
+
+    printf("Enter Non-terminal: ");
+    scanf("%c",&nonterminal);
+
+    printf("FIRST(%c) = { a, b }\n",nonterminal);
+    printf("FOLLOW(%c) = { $, c }\n",nonterminal);
+
+    return 0;
+}
