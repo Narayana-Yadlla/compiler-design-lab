@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char production[20],alpha[20],beta[20];
+
+    printf("Enter production (A->Aa/b): ");
+    scanf("%s",production);
+
+    if(production[3]==production[0])
+    {
+        printf("Left recursion detected\n");
+        printf("Eliminated form:\n");
+
+        alpha[0]=production[4];
+        beta[0]=production[6];
+
+        printf("A -> %cA'\n",beta[0]);
+        printf("A' -> %cA' | e\n",alpha[0]);
+    }
+    else
+    {
+        printf("No left recursion\n");
+    }
+
+    return 0;
+}
